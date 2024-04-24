@@ -1,0 +1,5 @@
+<div class="wallet-box" *ngIf="{wallet: wallet$ | async} as option">
+  <div class="wallet-value">
+    {{ option.wallet }} €
+  </div>
+</div>

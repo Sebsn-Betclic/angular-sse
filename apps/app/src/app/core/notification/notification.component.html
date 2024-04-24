@@ -1,0 +1,22 @@
+<ng-container
+  *ngIf="{totalNotification: totalNotifications$ | async, notifications: notifications$ | async} as options">
+  <div class="icon-box">
+    <button class="btn-notification" (click)="toggleVisible()">
+      {{ options.totalNotification }}
+    </button>
+
+    <div class="notification-dropdown" [class.is-visible]="isVisible">
+      <div class="notification-dropdown-list">
+        @if(!options.totalNotification) {
+          <p class="no-notification">no notifications</p>
+        } @else {
+          @for (notification of options.notifications; track notification.id) {
+            <div class="notification-dropdown-list-item">
+              <p>{{notification.content}}</p>
+            </div>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</ng-container>

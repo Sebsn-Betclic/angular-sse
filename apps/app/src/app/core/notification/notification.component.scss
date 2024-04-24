@@ -1,0 +1,52 @@
+.icon-box {
+  position: relative;
+
+  .btn-notification {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background: #e9212a;
+    border: none;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  .notification-dropdown {
+    position: absolute;
+    z-index: 2;
+    background: white;
+    border: 1px solid #ccc;
+    min-height: 20px;
+    width: 300px;
+    top: 50px;
+    display: none;
+    border-radius: 10px;
+    left: -135px;
+
+    &.is-visible {
+      display: flex;
+    }
+
+    .notification-dropdown-list {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      .no-notification {
+        display: flex;
+        justify-content: center;
+        height: 20px;
+        align-items: center;
+        color: #cccccc;
+        align-content: center;
+        width: 100%;
+      }
+
+      .notification-dropdown-list-item {
+        font-size: 13px;
+        padding: 0 10px;
+      }
+    }
+  }
+}

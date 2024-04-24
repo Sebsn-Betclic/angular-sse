@@ -1,0 +1,13 @@
+<div class="betting-box" *ngIf="{bettings: bettings$ | async} as options">
+  <h3>Betting</h3>
+
+  <div class="betting-list">
+    @for (betting of options.bettings; track betting.id) {
+      <div class="betting-list-item">
+        {{betting.title}}
+
+        <button (click)="createBet(betting.id)">Bet</button>
+      </div>
+    }
+  </div>
+</div>

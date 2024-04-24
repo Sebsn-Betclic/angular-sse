@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  height: 50px;
+  background: #D2161E;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    width: 200px;
+  }
+
+  .right-side {
+    display: flex;
+
+  }
+}
