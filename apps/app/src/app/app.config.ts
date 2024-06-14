@@ -7,6 +7,7 @@ import { provideRouterStore } from '@ngrx/router-store';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
 import * as notificationsEffects from './stores/notifications/effects/notifications.effects';
 import * as bettingEffects from './stores/bettings/effects/bettings.effects';
@@ -29,5 +30,6 @@ export const appConfig: ApplicationConfig = {
     provideEffects(userEffects, notificationsEffects, bettingEffects, walletEffects),
     provideRouterStore(),
     provideStoreDevtools(),
+    provideEnvironmentNgxMask(),
   ],
 };
